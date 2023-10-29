@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.kt</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">HomeWork3_1</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">Main.kt</span></div><h1>Main.kt</h1><pre class="source lang-java linenums">fun main() {
+
+//    var result = calcFee(15_000, cardType = &quot;Master&quot;, previousTransfersSumMonth = 70000)
+//    println(result)
+<span class="nc" id="L5">}</span>
+
+<span class="fc" id="L7">fun calcFee(transferAmount: Int, cardType: String = &quot;VK Pay&quot;, previousTransfersSumMonth: Int = 0): Number {</span>
+
+<span class="fc" id="L9">    val feeRateMasterMaestro = 0.006</span>
+<span class="fc" id="L10">    val feeRateMinMasterMaestro = 20</span>
+<span class="fc" id="L11">    val limitForNoFeeMasterMaestro = 75_000</span>
+<span class="fc" id="L12">    val monthlyLimit = 600_000</span>
+<span class="fc" id="L13">    val dailyLimit = 150_000</span>
+<span class="fc" id="L14">    val feeRateVisaMir = 0.0075</span>
+<span class="fc" id="L15">    val feeRateMinVisaMir = 35</span>
+<span class="fc" id="L16">    val dailyLimitVkpay = 15_000</span>
+<span class="fc" id="L17">    val monthlyLimitVkpay = 40_000</span>
+
+<span class="pc bpc" id="L19" title="4 of 13 branches missed.">    return when (cardType) {</span>
+<span class="pc bpc" id="L20" title="1 of 2 branches missed.">        &quot;Visa&quot;, &quot;Mir&quot; -&gt; if (transferAmount &gt; dailyLimit ||</span>
+<span class="fc bfc" id="L21" title="All 2 branches covered.">            (transferAmount + previousTransfersSumMonth) &gt; monthlyLimit</span>
+<span class="fc" id="L22">        ) (-1) else</span>
+<span class="fc bfc" id="L23" title="All 2 branches covered.">            (if ((transferAmount * feeRateVisaMir) &gt; feeRateMinVisaMir) transferAmount * feeRateVisaMir</span>
+<span class="fc" id="L24">            else feeRateMinVisaMir)</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        &quot;Maestro&quot;, &quot;Master&quot; -&gt; if (transferAmount &gt; dailyLimit ||</span>
+<span class="pc bpc" id="L26" title="1 of 2 branches missed.">            (transferAmount + previousTransfersSumMonth) &gt; monthlyLimit</span>
+<span class="fc" id="L27">        ) (-1) else</span>
+<span class="fc bfc" id="L28" title="All 2 branches covered.">            (if (previousTransfersSumMonth + transferAmount &gt; limitForNoFeeMasterMaestro)</span>
+<span class="fc" id="L29">                (transferAmount * feeRateMasterMaestro + feeRateMinMasterMaestro) else 0)</span>
+<span class="pc bpc" id="L30" title="1 of 2 branches missed.">        else -&gt; if (transferAmount &gt; dailyLimitVkpay ||</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">            transferAmount + previousTransfersSumMonth &gt; monthlyLimitVkpay</span>
+<span class="fc" id="L32">        ) (-1) else 0</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

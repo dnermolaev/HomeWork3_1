@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MainKtTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2023-10-29T14:23:37" hostname="WIN-4KMDUG1C2KO" time="0.014">
+  <properties/>
+  <testcase name="calcFeeDeafultPreviousTransferDefault" classname="MainKtTest" time="0.009"/>
+  <testcase name="calcNoFeeMaestro" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcFeeDeafult" classname="MainKtTest" time="0.001"/>
+  <testcase name="calcFeeVkpayStopLimit" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcMinFeeVisa" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcFeeVkpay" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcMinFeeMir" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcFeeMaestroStopLimit" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcFeeVisa" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcFeeMirStopLimit" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcNoFeeMaster" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcFeeMasterStopLimit" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcFeeDeafultCardType" classname="MainKtTest" time="0.001"/>
+  <testcase name="calcFeeMaster" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcFeeMaestro" classname="MainKtTest" time="0.0"/>
+  <testcase name="calcFeeMir" classname="MainKtTest" time="0.002"/>
+  <testcase name="calcFeeVisaStopLimit" classname="MainKtTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
