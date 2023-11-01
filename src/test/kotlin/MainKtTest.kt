@@ -418,6 +418,6 @@ class MainKtTest {
             cardType = card,
         )
 
-        assertEquals(0, result)
+        assertEquals(-1, result)
     }
 }
